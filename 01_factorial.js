@@ -32,7 +32,7 @@ const computeFactorialRec = (n) => {
 function perform() {
     const choice = prompt("Factorielle de combien ? ");
     if (!checkInput(choice)) {
-        return ("FIN");
+        console.log("FIN");
     } else {
         console.log("[Itérations] => " + computeFactorialIt(choice));
         console.log("[Récursivité] => " + computeFactorialRec(choice));
