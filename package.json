@@ -1,0 +1,22 @@
+{
+  "name": "thp_dev_w2d1-recursivity",
+  "version": "1.0.0",
+  "description": "## How to use ? 1. Clone this repo. 2. Open your Terminal. 3. Laucnch any of the following files in order to have a look --> node aFilname     - 01_factorial.js     - 02_ etc.",
+  "main": "01_factorielle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ju777/THP_dev_w2d1-recursivity.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ju777/THP_dev_w2d1-recursivity/issues"
+  },
+  "homepage": "https://github.com/Ju777/THP_dev_w2d1-recursivity#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
