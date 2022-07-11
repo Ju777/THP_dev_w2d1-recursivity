@@ -1,6 +1,6 @@
 const prompt = require("prompt-sync")({ sigint: true });
 
-function checkNumber(number) {
+function vaidateNumber(number) {
     if (number.includes('.') || number.includes(',') || parseInt(number) != number || parseInt(number) <= 0) {
         console.log("Vous devez entrer un entier positif non nul.");
         return false;
@@ -48,7 +48,7 @@ function perform() {
     // une racine carré, revient à chercher le côté 'larger' d'un carré dont l'aire est 'area'.
     var area = prompt("Quel nombre ? ");
 
-    if (!checkNumber(area)) {
+    if (!vaidateNumber(area)) {
         console.log("FIN");
     } else {
         area = parseInt(area);

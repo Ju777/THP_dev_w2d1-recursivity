@@ -1,6 +1,6 @@
 const prompt = require("prompt-sync")({ sigint: true });
 
-function checkInput(input) {
+function validateInput(input) {
     if (input.includes('.') || input.includes(',') || parseInt(input) != input || parseInt(input) < 0) {
         console.log("Le nombre doit être un entier positif ou nul.");
         return false;
@@ -31,7 +31,7 @@ const computeFactorialRec = (n) => {
 
 function perform() {
     const choice = prompt("Factorielle de combien ? ");
-    if (!checkInput(choice)) {
+    if (!validateInput(choice)) {
         console.log("FIN");
     } else {
         console.log("[Itérations] => " + computeFactorialIt(choice));

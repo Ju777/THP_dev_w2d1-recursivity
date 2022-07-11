@@ -1,6 +1,6 @@
 const prompt = require("prompt-sync")({ sigint: true });
 
-function checkNumber(number) {
+function validateNumber(number) {
     if (number.includes('.') || number.includes(',') || parseInt(number) != number || parseInt(number) < 0) {
         console.log("Le nombre doit être un entier positif non nul.");
         return false;
@@ -9,7 +9,7 @@ function checkNumber(number) {
     }
 }
 
-function checkPower(power) {
+function validatePower(power) {
     if (power.includes('.') || power.includes(',') || parseInt(power) != power || parseInt(power) < 0) {
         console.log("La puissance doit être un entier positif.");
         return false;
@@ -39,12 +39,12 @@ const computePowerRec = (n, p) => {
 }
 
 function perform() {
-    console.log("~ Calcul de la puissance d'un nomber ~\n")
+    console.log("~ Calcul de la puissance d'un nombre ~\n")
 
     const number = prompt("Quel nombre ? ");
     const power = prompt("A quelle puissance ? ");
 
-    if (!checkNumber(number) || !checkPower(power)) {
+    if (!validateNumber(number) || !validatePower(power)) {
         console.log("FIN");
     } else {
         console.log("[Itérations] => " + computePowerIt(parseInt(number), parseInt(power)));
