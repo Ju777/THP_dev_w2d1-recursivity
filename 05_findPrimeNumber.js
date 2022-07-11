@@ -11,10 +11,12 @@ function vaidateNumber(number) {
 
 const isPrimeNumber = (n, i) => {
     // Aidé par cette source : https://www.geeksforgeeks.org/recursive-program-prime-number/
+    // A noter que le protoype de la fonction compte un argument de plus que celui de l'énoncé.
     
     // Base cases
     if (n <= 2)
-        return (n == 2) ? true : false;
+        // return (n == 2) ? true : false;
+        return true;
     if (n % i == 0)
         return false;
     if (i * i > n)
@@ -24,8 +26,17 @@ const isPrimeNumber = (n, i) => {
     return isPrimeNumber(n, i + 1);
 }
 
+const findSubPrime = (n) => {
+    if (isPrimeNumber(n, 2)) {
+        return n
+    } else {
+        return findSubPrime(n+1);
+    }
+    
+}
+
 function perform() {
-    console.log("~ Déterminer si un nombre est premier ~\n")
+    console.log("~ Trouver le plus petit nombre premier supérieur ou égal à un nombre ~\n")
 
     var number = prompt("Quel nombre ? ");
 
@@ -33,7 +44,7 @@ function perform() {
         console.log("FIN");
     } else {
         number = parseInt(number);
-        console.log("Résultat => " + isPrimeNumber(number, 2));
+        console.log("Résultat => " + findSubPrime(number));
     }
     
 }
