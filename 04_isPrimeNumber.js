@@ -1,6 +1,6 @@
 const prompt = require("prompt-sync")({ sigint: true });
 
-function vaidateNumber(number) {
+function validateNumber(number) {
     if (number.includes('.') || number.includes(',') || parseInt(number) != number || parseInt(number) <= 0) {
         console.log("Le nombre doit être un entier positif non nul.");
         return false;
@@ -31,7 +31,7 @@ function perform() {
 
     var number = prompt("Quel nombre ? ");
 
-    if (!vaidateNumber(number)) {
+    if (!validateNumber(number)) {
         console.log("FIN");
     } else {
         number = parseInt(number);

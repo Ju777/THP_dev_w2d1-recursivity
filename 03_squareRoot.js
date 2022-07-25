@@ -18,9 +18,6 @@ const computeSquareRoot = (a, l) => {
     else {
         return computeSquareRoot(a, (l + (a/l))*0.5);
     }
-
-
-    
 }
 
 function digitsAfterDot(number) {
